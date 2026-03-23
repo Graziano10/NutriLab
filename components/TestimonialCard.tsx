@@ -20,7 +20,7 @@ export function TestimonialCard({ name, result, quote }: TestimonialCardProps) {
           <p className="text-sm text-brand-200">{result}</p>
         </div>
         <span className="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
-          Verified
+          Recensione
         </span>
       </div>
       <p className="mt-6 text-base leading-7 text-white/78">“{quote}”</p>

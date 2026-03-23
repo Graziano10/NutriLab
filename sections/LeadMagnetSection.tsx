@@ -9,15 +9,15 @@ export function LeadMagnetSection() {
       <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-8">
         <div>
           <SectionHeading
-            eyebrow="Interazione"
-            title="Più dinamismo, più coinvolgimento: ora il lead magnet invita davvero all’azione."
-            description="Ho sostituito l’approccio statico con un blocco più immersivo: copy più incisivo, lista benefit più chiara e un calcolatore più interattivo con slider e anteprima macro."
+            eyebrow="Strumento gratuito"
+            title="Calcola il tuo fabbisogno calorico stimato e preparati alla prima consulenza nutrizionale."
+            description="Questo calcolatore è un supporto informativo utile per avere un primo orientamento. Il fabbisogno reale viene definito in modo più preciso durante la valutazione professionale."
             theme="dark"
           />
           <div className="mt-8 rounded-[2rem] border border-white/10 bg-white/[0.08] p-8 shadow-[0_25px_75px_rgba(6,15,12,0.18)] backdrop-blur-xl">
-            <h3 className="text-2xl font-bold text-white">Audit rapido del tuo profilo nutrizionale</h3>
+            <h3 className="text-2xl font-bold text-white">Un piccolo strumento utile, prima di iniziare il percorso</h3>
             <p className="mt-3 text-base leading-7 text-white/70">
-              Una sezione di valore che aumenta il tempo sul sito e rende l’esperienza molto più memorabile, utile e moderna.
+              Inserisci pochi dati per ottenere una stima iniziale delle calorie giornaliere e capire meglio quale approccio può essere più adatto ai tuoi obiettivi.
             </p>
             <ul className="mt-6 space-y-4">
               {quizBenefits.map((benefit) => (
@@ -28,9 +28,9 @@ export function LeadMagnetSection() {
               ))}
             </ul>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Button href="#book">Richiedi il piano</Button>
-              <Button href="mailto:hello@nutrilab.example" variant="secondary">
-                Ricevi info via email
+              <Button href="#book">Prenota la prima visita</Button>
+              <Button href="mailto:info@nutrilab.it" variant="secondary">
+                Richiedi informazioni
               </Button>
             </div>
           </div>

@@ -1,10 +1,10 @@
 import { Button } from '@/components/Button';
 
 const serviceIcons: Record<string, string> = {
-  'Personalized meal plans': '✦',
-  'Sports nutrition': '⚡',
-  'Nutritional education': '◎',
-  'Online coaching': '◉',
+  'Piano alimentare personalizzato': '✦',
+  'Nutrizione sportiva': '⚡',
+  'Educazione alimentare': '◎',
+  'Percorso online con check-in': '◉',
 };
 
 type ServiceCardProps = {
@@ -24,7 +24,7 @@ export function ServiceCard({ title, description, outcome, cta }: ServiceCardPro
       <h3 className="text-2xl font-semibold text-white">{title}</h3>
       <p className="mt-4 flex-1 text-sm leading-6 text-white/70">{description}</p>
       <div className="mt-6 rounded-[1.5rem] border border-white/10 bg-black/10 p-4 text-sm text-white/84">
-        <span className="font-semibold text-brand-200">Outcome:</span> {outcome}
+        <span className="font-semibold text-brand-200">Beneficio:</span> {outcome}
       </div>
       <Button href="#book" variant="secondary" className="mt-6 w-full justify-between border-white/10 text-white">
         {cta}

@@ -1,85 +1,85 @@
 export const stats = [
-  { value: '1,200+', label: 'clients guided with personalized nutrition' },
-  { value: '4.9/5', label: 'average review score from coaching clients' },
-  { value: '92%', label: 'report more energy and consistency in 60 days' },
+  { value: '500+', label: 'consulenze nutrizionali svolte online e in studio' },
+  { value: '4.9/5', label: 'valutazione media raccolta dai percorsi conclusi' },
+  { value: '12 sett.', label: 'durata media per consolidare nuove abitudini alimentari' },
 ];
 
 export const painPoints = [
-  'You keep restarting diets and never build sustainable habits.',
-  'Healthy eating feels confusing when work, family, and training compete for your attention.',
-  'Generic meal plans fail because they ignore your lifestyle, preferences, and metabolism.',
+  'Hai già provato diete restrittive, ma dopo poche settimane torni alle vecchie abitudini.',
+  'Non sai come organizzare pasti equilibrati tra lavoro, famiglia, allenamento e vita sociale.',
+  'Cerchi un piano alimentare personalizzato che tenga conto di gusti, routine, obiettivi e sostenibilità.',
 ];
 
 export const services = [
   {
-    title: 'Personalized meal plans',
-    description: 'Flexible weekly nutrition plans aligned with your schedule, food preferences, and goals.',
-    outcome: 'Feel in control of your meals and see steady progress without restrictive dieting.',
-    cta: 'Build my plan',
+    title: 'Piano alimentare personalizzato',
+    description: 'Schema nutrizionale costruito sui tuoi fabbisogni, con pasti flessibili, porzioni pratiche e indicazioni adatte alla tua giornata.',
+    outcome: 'Segui un percorso chiaro, realistico e sostenibile per dimagrimento, ricomposizione corporea o benessere generale.',
+    cta: 'Richiedi il piano',
   },
   {
-    title: 'Sports nutrition',
-    description: 'Fueling strategies for performance, recovery, and body composition improvement.',
-    outcome: 'Train harder, recover faster, and support lean muscle growth with precision.',
-    cta: 'Improve performance',
+    title: 'Nutrizione sportiva',
+    description: 'Strategie nutrizionali per chi si allena con regolarità e vuole ottimizzare energia, recupero, forza e composizione corporea.',
+    outcome: 'Migliori performance e recupero con una gestione più precisa di pasti, timing e macronutrienti.',
+    cta: 'Ottimizza la performance',
   },
   {
-    title: 'Nutritional education',
-    description: 'Learn how to read labels, structure plates, and make confident decisions anywhere.',
-    outcome: 'Create lifelong habits instead of depending on temporary rules.',
-    cta: 'Learn the system',
+    title: 'Educazione alimentare',
+    description: 'Percorso per imparare a comporre i pasti, leggere le etichette e fare scelte consapevoli anche fuori casa.',
+    outcome: 'Diventi autonomo nella gestione dell’alimentazione senza dipendere da regole rigide o menu standard.',
+    cta: 'Impara il metodo',
   },
   {
-    title: 'Online coaching',
-    description: 'Weekly accountability, messaging support, and progress reviews from anywhere.',
-    outcome: 'Stay consistent, solve obstacles quickly, and keep momentum between check-ins.',
-    cta: 'Start coaching',
+    title: 'Percorso online con check-in',
+    description: 'Supporto continuativo con monitoraggio dei progressi, revisione delle strategie e confronto costante tra una visita e l’altra.',
+    outcome: 'Mantieni motivazione e continuità con un professionista che adatta il percorso ai cambiamenti reali.',
+    cta: 'Inizia il percorso',
   },
 ];
 
 export const methodSteps = [
   {
     step: '01',
-    title: 'Initial assessment',
-    description: 'We review your health history, routine, goals, food preferences, and current obstacles.',
+    title: 'Prima valutazione nutrizionale',
+    description: 'Analizziamo anamnesi, abitudini, obiettivi, eventuali esami, allenamento e organizzazione dei pasti.',
   },
   {
     step: '02',
-    title: 'Custom plan',
-    description: 'You receive a practical action plan with meals, targets, and a roadmap tailored to you.',
+    title: 'Strategia personalizzata',
+    description: 'Ricevi indicazioni concrete, piano alimentare su misura e obiettivi settimanali semplici da applicare.',
   },
   {
     step: '03',
-    title: 'Ongoing support',
-    description: 'Regular check-ins, habit tracking, and direct feedback keep you motivated and clear.',
+    title: 'Monitoraggio e supporto',
+    description: 'Check-in periodici per valutare andamento, fame, energia, aderenza al piano e difficoltà quotidiane.',
   },
   {
     step: '04',
-    title: 'Adjustments',
-    description: 'Your nutrition evolves with your progress, schedule, and real-life challenges.',
+    title: 'Aggiornamenti del percorso',
+    description: 'Adattiamo il piano in base ai risultati, ai cambiamenti della routine e alle nuove esigenze personali.',
   },
 ];
 
 export const testimonials = [
   {
-    name: 'Emily R.',
-    result: 'Lost 18 lbs in 4 months',
-    quote: 'For the first time, I had a plan that fit my work schedule and still felt realistic. I stopped bingeing and started trusting the process.',
+    name: 'Martina, 34 anni',
+    result: 'Percorso di educazione alimentare e dimagrimento',
+    quote: 'Ho smesso di saltare da una dieta all’altra. Con un piano semplice e personalizzato sono riuscita a perdere peso senza vivere il cibo con ansia.',
   },
   {
-    name: 'Daniel M.',
-    result: 'Gained 6 lbs of lean muscle',
-    quote: 'The sports nutrition guidance completely changed my recovery. I’m stronger in the gym and no longer guessing what to eat.',
+    name: 'Luca, 29 anni',
+    result: 'Nutrizione sportiva per palestra e recupero',
+    quote: 'Allenandomi spesso avevo bisogno di indicazioni precise. Ora gestisco meglio i pasti, recupero di più e mi sento più costante negli allenamenti.',
   },
   {
-    name: 'Priya S.',
-    result: 'Improved energy and digestion',
-    quote: 'The coaching was supportive, specific, and easy to follow. My meals are simpler now, and I feel better every day.',
+    name: 'Chiara, 42 anni',
+    result: 'Percorso online compatibile con lavoro e famiglia',
+    quote: 'Il valore più grande è stato avere indicazioni realistiche. Nessun menu impossibile: solo strategie pratiche che sono riuscita davvero a mantenere.',
   },
 ];
 
 export const quizBenefits = [
-  'Identify the habits slowing down your progress.',
-  'Get a quick-read nutrition profile in under 2 minutes.',
-  'Receive practical next steps and book a personalized consultation.',
+  'Ottieni una stima iniziale del tuo fabbisogno calorico giornaliero.',
+  'Capisci quale obiettivo nutrizionale è più coerente con il tuo stile di vita.',
+  'Prenoti una consulenza con maggiore consapevolezza sui tuoi bisogni reali.',
 ];

@@ -1,6 +1,6 @@
 import { Button } from '@/components/Button';
 
-const trustPoints = ['Disponibilità limitata', 'Approccio 1:1', 'Strategia personalizzata'];
+const trustPoints = ['Posti limitati ogni mese', 'Percorso 1:1', 'Piano su misura'];
 
 export function FinalCTASection() {
   return (
@@ -17,17 +17,17 @@ export function FinalCTASection() {
                 </span>
               ))}
             </div>
-            <p className="mt-6 text-sm font-semibold uppercase tracking-[0.24em] text-brand-200">Call to action finale</p>
+            <p className="mt-6 text-sm font-semibold uppercase tracking-[0.24em] text-brand-200">Prenota la consulenza</p>
             <h2 className="mt-4 max-w-3xl text-3xl font-bold tracking-tight sm:text-5xl">
-              Ora il sito ha una presenza decisamente più professionale, reattiva e spettacolare.
+              Inizia un percorso nutrizionale personalizzato costruito sui tuoi obiettivi e sulla tua quotidianità.
             </h2>
             <p className="mt-6 max-w-2xl text-base leading-8 text-white/75 sm:text-lg">
-              Il nuovo design porta più impatto visivo, più fluidità su mobile e interazioni che rendono l’esperienza più moderna e memorabile per i potenziali clienti.
+              Se desideri un supporto professionale per dimagrimento, educazione alimentare, nutrizione sportiva o ricomposizione corporea, puoi richiedere una prima consulenza e valutare insieme il percorso più adatto.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Button href="mailto:hello@nutrilab.example?subject=Nutrition%20Consultation">Prenota una consulenza</Button>
+              <Button href="mailto:info@nutrilab.it?subject=Richiesta%20consulenza%20nutrizionale">Prenota una consulenza</Button>
               <Button href="#services" variant="secondary">
-                Rivedi i servizi
+                Vedi i servizi
               </Button>
             </div>
           </div>
