@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-sand text-ink antialiased;
+}
+
+* {
+  @apply border-brand-100;
+}
+
+::selection {
+  @apply bg-brand-200 text-brand-900;
+}
