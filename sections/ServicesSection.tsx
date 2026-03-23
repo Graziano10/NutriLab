@@ -8,8 +8,8 @@ export function ServicesSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeading
           eyebrow="Servizi"
-          title="Servizi di nutrizione personalizzata per dimagrimento, sport, educazione alimentare e supporto continuativo."
-          description="Scegli il percorso più adatto al tuo obiettivo: migliorare l’alimentazione, perdere peso, aumentare la massa muscolare o trovare un equilibrio sostenibile nel tempo."
+          title="Percorsi nutrizionali su misura per i tuoi obiettivi."
+          description="Dimagrimento, sport, educazione alimentare e supporto continuo: scegli ciò che ti serve davvero."
           align="center"
           theme="dark"
         />
