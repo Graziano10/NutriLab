@@ -83,10 +83,6 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="absolute -bottom-5 -left-5 hidden max-w-xs rounded-[1.5rem] border border-white/10 bg-white/10 p-5 shadow-soft backdrop-blur-xl sm:block">
-            <p className="text-sm font-semibold text-white">Interazioni che elevano la percezione del brand</p>
-            <p className="mt-2 text-sm leading-6 text-white/65">Hover fluidi, contrasti raffinati e gerarchia visiva più incisiva.</p>
-          </div>
         </div>
       </div>
     </section>

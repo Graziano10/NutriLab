@@ -23,7 +23,7 @@ export function Button({ children, href, variant = 'primary', className = '' }: 
     >
       <span className="relative z-10">{children}</span>
       <span className="relative z-10 transition duration-300 group-hover:translate-x-0.5">→</span>
-      <span className="absolute inset-0 translate-y-full bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.28),transparent)] transition duration-500 group-hover:translate-y-0" />
+      {/* <span className="absolute inset-0 translate-y-full bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.28),transparent)] transition duration-500 group-hover:translate-y-0" /> */}
     </Link>
   );
 }
