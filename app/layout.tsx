@@ -7,6 +7,13 @@ export const metadata: Metadata = {
   title: 'NutriLab | Personalized Nutrition Coaching',
   description:
     'Professional nutrition coaching for weight loss, muscle gain, and healthier eating habits with personalized plans and ongoing support.',
+
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
+
   openGraph: {
     title: 'NutriLab | Personalized Nutrition Coaching',
     description:
@@ -15,6 +22,7 @@ export const metadata: Metadata = {
     siteName: 'NutriLab',
     type: 'website',
   },
+
   twitter: {
     card: 'summary_large_image',
     title: 'NutriLab | Personalized Nutrition Coaching',
