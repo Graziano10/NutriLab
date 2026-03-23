@@ -1,4 +1,5 @@
 import { StickyWhatsApp } from '@/components/StickyWhatsApp';
+import { Navbar } from '@/components/Navbar';
 import { FinalCTASection } from '@/sections/FinalCTASection';
 import { HeroSection } from '@/sections/HeroSection';
 import { LeadMagnetSection } from '@/sections/LeadMagnetSection';
@@ -9,7 +10,8 @@ import { TestimonialsSection } from '@/sections/TestimonialsSection';
 
 export default function Home() {
   return (
-    <main>
+    <main className="relative overflow-hidden">
+      <Navbar />
       <HeroSection />
       <ProblemSolutionSection />
       <ServicesSection />

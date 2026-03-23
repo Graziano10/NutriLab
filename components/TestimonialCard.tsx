@@ -6,17 +6,24 @@ type TestimonialCardProps = {
 
 export function TestimonialCard({ name, result, quote }: TestimonialCardProps) {
   return (
-    <article className="rounded-3xl border border-white/60 bg-white p-8 shadow-soft">
+    <article className="group rounded-[2rem] border border-white/10 bg-white/[0.08] p-8 shadow-[0_25px_70px_rgba(6,15,12,0.16)] backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:border-brand-300/40">
       <div className="flex items-center justify-between gap-4">
         <div>
-          <h3 className="text-lg font-semibold text-ink">{name}</h3>
-          <p className="text-sm text-brand-600">{result}</p>
+          <div className="flex items-center gap-1 text-brand-200" aria-hidden="true">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+          </div>
+          <h3 className="mt-3 text-lg font-semibold text-white">{name}</h3>
+          <p className="text-sm text-brand-200">{result}</p>
         </div>
-        <span className="rounded-full bg-brand-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-700">
-          Verified client
+        <span className="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
+          Verified
         </span>
       </div>
-      <p className="mt-6 text-base leading-7 text-ink/75">“{quote}”</p>
+      <p className="mt-6 text-base leading-7 text-white/78">“{quote}”</p>
     </article>
   );
 }

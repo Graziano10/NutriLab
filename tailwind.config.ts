@@ -30,6 +30,11 @@ const config: Config = {
       },
       backgroundImage: {
         'hero-glow': 'radial-gradient(circle at top, rgba(47,171,114,0.18), transparent 42%)',
+        'hero-grid':
+          'linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)',
+      },
+      backgroundSize: {
+        'grid-lg': '72px 72px',
       },
     },
   },

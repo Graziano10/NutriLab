@@ -10,18 +10,20 @@ type ButtonProps = {
 
 const variantClasses = {
   primary:
-    'bg-brand-500 text-white hover:bg-brand-600 focus-visible:outline-brand-500 shadow-soft',
+    'bg-gradient-to-r from-brand-500 via-brand-400 to-brand-600 text-white shadow-[0_18px_40px_rgba(47,171,114,0.35)] hover:-translate-y-0.5 hover:shadow-[0_22px_55px_rgba(47,171,114,0.45)] focus-visible:outline-brand-300',
   secondary:
-    'bg-white text-brand-700 ring-1 ring-brand-200 hover:bg-brand-50 focus-visible:outline-brand-400',
+    'border border-white/15 bg-white/8 text-white backdrop-blur-md hover:border-white/30 hover:bg-white/14 focus-visible:outline-white/60 dark-ring',
 };
 
 export function Button({ children, href, variant = 'primary', className = '' }: ButtonProps) {
   return (
     <Link
       href={href}
-      className={`inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${variantClasses[variant]} ${className}`}
+      className={`group inline-flex items-center justify-center gap-2 overflow-hidden rounded-full px-6 py-3 text-sm font-semibold transition duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${variantClasses[variant]} ${className}`}
     >
-      {children}
+      <span className="relative z-10">{children}</span>
+      <span className="relative z-10 transition duration-300 group-hover:translate-x-0.5">→</span>
+      <span className="absolute inset-0 translate-y-full bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.28),transparent)] transition duration-500 group-hover:translate-y-0" />
     </Link>
   );
 }

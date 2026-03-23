@@ -12,6 +12,24 @@ const activityMap = {
 type ActivityLevel = keyof typeof activityMap;
 type Goal = 'fat-loss' | 'maintain' | 'muscle-gain';
 
+const goalContent: Record<Goal, { label: string; accent: string; summary: string }> = {
+  'fat-loss': {
+    label: 'Definizione',
+    accent: 'from-[#FF9A62] to-[#FF6B57]',
+    summary: 'Leggero deficit calorico per accelerare risultati senza perdere aderenza.',
+  },
+  maintain: {
+    label: 'Mantenimento',
+    accent: 'from-[#7DD3FC] to-[#38BDF8]',
+    summary: 'Equilibrio per stabilizzare energia, performance e routine sostenibile.',
+  },
+  'muscle-gain': {
+    label: 'Performance',
+    accent: 'from-brand-300 to-brand-500',
+    summary: 'Surplus controllato per supportare recupero, forza e massa magra.',
+  },
+};
+
 export function CalorieCalculator() {
   const [weight, setWeight] = useState(70);
   const [height, setHeight] = useState(170);
@@ -28,6 +46,12 @@ export function CalorieCalculator() {
     return maintenance;
   }, [activity, age, goal, height, weight]);
 
+  const macroPreview = useMemo(() => {
+    if (goal === 'fat-loss') return { protein: '35%', carbs: '35%', fats: '30%' };
+    if (goal === 'muscle-gain') return { protein: '30%', carbs: '45%', fats: '25%' };
+    return { protein: '30%', carbs: '40%', fats: '30%' };
+  }, [goal]);
+
   const handleNumberChange = (setter: (value: number) => void) => (event: ChangeEvent<HTMLInputElement>) => {
     setter(Number(event.target.value));
   };
@@ -37,68 +61,74 @@ export function CalorieCalculator() {
   };
 
   return (
-    <div className="rounded-[2rem] border border-brand-100 bg-white p-6 shadow-soft sm:p-8">
+    <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.08] p-6 shadow-[0_30px_80px_rgba(6,15,12,0.22)] backdrop-blur-xl sm:p-8">
       <div className="mb-6">
-        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-600">Quick tool</p>
-        <h3 className="mt-3 text-2xl font-bold text-ink">Estimate your daily calorie target</h3>
-        <p className="mt-3 text-sm leading-6 text-ink/70">
-          A lightweight estimator to spark action. Your consultation turns this into a fully personalized strategy.
+        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-200">Quick tool</p>
+        <h3 className="mt-3 text-2xl font-bold text-white sm:text-3xl">Simula il tuo target calorico quotidiano</h3>
+        <p className="mt-3 text-sm leading-6 text-white/70">
+          Uno strumento rapido e interattivo per visualizzare il punto di partenza prima della consulenza personalizzata.
         </p>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
-        <label className="text-sm font-medium text-ink">
-          Weight (kg)
+        <label className="text-sm font-medium text-white/90">
+          Peso (kg)
           <input
-            type="number"
+            type="range"
             min="35"
+            max="140"
             value={weight}
             onChange={handleNumberChange(setWeight)}
-            className="mt-2 w-full rounded-2xl border border-brand-100 bg-sand px-4 py-3 outline-none transition focus:border-brand-400"
+            className="mt-3 w-full accent-brand-400"
           />
+          <span className="mt-2 inline-flex rounded-full bg-white/10 px-3 py-1.5 text-sm text-white">{weight} kg</span>
         </label>
-        <label className="text-sm font-medium text-ink">
-          Height (cm)
+        <label className="text-sm font-medium text-white/90">
+          Altezza (cm)
           <input
-            type="number"
+            type="range"
             min="130"
+            max="210"
             value={height}
             onChange={handleNumberChange(setHeight)}
-            className="mt-2 w-full rounded-2xl border border-brand-100 bg-sand px-4 py-3 outline-none transition focus:border-brand-400"
+            className="mt-3 w-full accent-brand-400"
           />
+          <span className="mt-2 inline-flex rounded-full bg-white/10 px-3 py-1.5 text-sm text-white">{height} cm</span>
         </label>
-        <label className="text-sm font-medium text-ink">
-          Age
+        <label className="text-sm font-medium text-white/90">
+          Età
           <input
-            type="number"
+            type="range"
             min="16"
+            max="75"
             value={age}
             onChange={handleNumberChange(setAge)}
-            className="mt-2 w-full rounded-2xl border border-brand-100 bg-sand px-4 py-3 outline-none transition focus:border-brand-400"
+            className="mt-3 w-full accent-brand-400"
           />
+          <span className="mt-2 inline-flex rounded-full bg-white/10 px-3 py-1.5 text-sm text-white">{age} anni</span>
         </label>
-        <label className="text-sm font-medium text-ink">
-          Activity level
+        <label className="text-sm font-medium text-white/90">
+          Attività settimanale
           <select
             value={activity}
             onChange={handleActivityChange}
-            className="mt-2 w-full rounded-2xl border border-brand-100 bg-sand px-4 py-3 outline-none transition focus:border-brand-400"
+            className="mt-3 w-full rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-white outline-none transition focus:border-brand-300"
           >
-            <option value="sedentary">Mostly sedentary</option>
-            <option value="light">Light activity</option>
-            <option value="moderate">Moderate training</option>
-            <option value="active">Very active</option>
+            <option value="sedentary" className="text-ink">Sedentario</option>
+            <option value="light" className="text-ink">Leggera attività</option>
+            <option value="moderate" className="text-ink">Allenamento moderato</option>
+            <option value="active" className="text-ink">Molto attivo</option>
           </select>
         </label>
       </div>
 
-      <div className="mt-4">
-        <p className="mb-3 text-sm font-medium text-ink">Primary goal</p>
+      <div className="mt-6">
+        <p className="mb-3 text-sm font-medium text-white/90">Obiettivo principale</p>
         <div className="flex flex-wrap gap-3">
           {[
-            { value: 'fat-loss', label: 'Fat loss' },
-            { value: 'maintain', label: 'Maintain' },
-            { value: 'muscle-gain', label: 'Muscle gain' },
+            { value: 'fat-loss', label: 'Dimagrimento' },
+            { value: 'maintain', label: 'Mantenimento' },
+            { value: 'muscle-gain', label: 'Massa muscolare' },
           ].map((option) => {
             const activeOption = goal === option.value;
             return (
@@ -106,8 +136,10 @@ export function CalorieCalculator() {
                 key={option.value}
                 type="button"
                 onClick={() => setGoal(option.value as Goal)}
-                className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
-                  activeOption ? 'bg-brand-500 text-white' : 'bg-brand-50 text-brand-700 hover:bg-brand-100'
+                className={`rounded-full px-4 py-2.5 text-sm font-semibold transition ${
+                  activeOption
+                    ? 'bg-white text-ink shadow-[0_10px_25px_rgba(255,255,255,0.16)]'
+                    : 'bg-white/8 text-white/80 hover:bg-white/12'
                 }`}
               >
                 {option.label}
@@ -117,12 +149,33 @@ export function CalorieCalculator() {
         </div>
       </div>
 
-      <div className="mt-6 rounded-[1.5rem] bg-brand-600 p-6 text-white">
-        <p className="text-sm uppercase tracking-[0.2em] text-white/80">Estimated target</p>
-        <p className="mt-2 text-4xl font-bold">{calories} kcal/day</p>
-        <p className="mt-3 text-sm leading-6 text-white/80">
-          Use this as a baseline, then book a consultation for a tailored plan with meal structure, macros, and accountability.
-        </p>
+      <div className="mt-8 grid gap-4 lg:grid-cols-[1.15fr_0.85fr]">
+        <div className={`rounded-[1.75rem] bg-gradient-to-br ${goalContent[goal].accent} p-6 text-white`}>
+          <p className="text-sm uppercase tracking-[0.2em] text-white/80">Target stimato</p>
+          <p className="mt-2 text-4xl font-bold sm:text-5xl">{calories} kcal</p>
+          <p className="mt-3 max-w-md text-sm leading-6 text-white/85">{goalContent[goal].summary}</p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <span className="rounded-full bg-white/20 px-4 py-2 text-sm">{goalContent[goal].label}</span>
+            <span className="rounded-full bg-white/20 px-4 py-2 text-sm">Routine {activity}</span>
+          </div>
+        </div>
+
+        <div className="rounded-[1.75rem] border border-white/10 bg-black/10 p-6">
+          <p className="text-sm uppercase tracking-[0.2em] text-brand-200">Macro preview</p>
+          <div className="mt-5 space-y-4">
+            {Object.entries(macroPreview).map(([macro, value]) => (
+              <div key={macro}>
+                <div className="mb-2 flex items-center justify-between text-sm text-white/80">
+                  <span className="capitalize">{macro}</span>
+                  <span>{value}</span>
+                </div>
+                <div className="h-2 rounded-full bg-white/10">
+                  <div className="h-2 rounded-full bg-white" style={{ width: value }} />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
