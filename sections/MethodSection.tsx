@@ -7,8 +7,8 @@ export function MethodSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeading
           eyebrow="Metodo"
-          title="Come funziona il percorso nutrizionale: 4 fasi semplici, personalizzate e monitorate."
-          description="Ogni consulenza nutrizionale segue una struttura chiara: analisi iniziale, strategia su misura, monitoraggio dei progressi e aggiornamenti continui del piano alimentare."
+          title="Un percorso chiaro in 4 step."
+          description="Analisi, piano su misura, supporto e aggiornamenti costanti."
           align="center"
           theme="dark"
         />

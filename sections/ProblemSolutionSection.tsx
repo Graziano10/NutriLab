@@ -8,15 +8,15 @@ export function ProblemSolutionSection() {
         <div className="lg:sticky lg:top-28">
           <SectionHeading
             eyebrow="A chi è rivolto"
-            title="Se vuoi mangiare meglio senza seguire una dieta rigida, serve un metodo personalizzato e professionale."
-            description="Molte persone arrivano in studio dopo aver provato soluzioni generiche. Il percorso nutrizionale funziona meglio quando è realistico, graduale e costruito sulle tue esigenze concrete."
+            title="Se vuoi risultati veri, ti serve un piano che funzioni nella tua vita."
+            description="Niente schemi rigidi: solo un percorso realistico, costruito su di te."
             theme="dark"
           />
           <div className="mt-8 rounded-[2rem] border border-white/10 bg-white/[0.08] p-7 shadow-[0_25px_70px_rgba(6,15,12,0.16)] backdrop-blur-xl">
             <p className="text-sm uppercase tracking-[0.22em] text-brand-200">Obiettivo del percorso</p>
-            <p className="mt-4 text-3xl font-bold text-white">Farti ottenere risultati che puoi davvero mantenere.</p>
+            <p className="mt-4 text-3xl font-bold text-white">Farti stare bene e aiutarti a mantenere i risultati.</p>
             <p className="mt-4 text-base leading-7 text-white/70">
-              Lavoriamo su alimentazione, organizzazione dei pasti e abitudini quotidiane per creare una strategia nutrizionale efficace nel breve periodo e sostenibile nel lungo termine.
+              Lavoriamo su alimentazione e abitudini quotidiane con una strategia semplice, efficace e sostenibile.
             </p>
           </div>
         </div>
@@ -40,9 +40,9 @@ export function ProblemSolutionSection() {
           ))}
           <div className="overflow-hidden rounded-[2rem] border border-brand-300/20 bg-gradient-to-br from-brand-500/25 via-brand-600/15 to-cyan-400/10 p-8 text-white shadow-[0_25px_70px_rgba(12,35,28,0.22)]">
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-100">Come posso aiutarti</p>
-            <h3 className="mt-3 text-2xl font-bold sm:text-3xl">Con un piano alimentare personalizzato, indicazioni chiare e un percorso calibrato sulla tua routine.</h3>
+            <h3 className="mt-3 text-2xl font-bold sm:text-3xl">Con indicazioni chiare, un piano su misura e un metodo che puoi seguire davvero.</h3>
             <p className="mt-4 max-w-2xl text-base leading-7 text-white/82">
-              Il lavoro non si limita a “cosa mangiare”: include educazione alimentare, organizzazione pratica dei pasti, revisione degli ostacoli e adattamenti progressivi in base ai tuoi risultati.
+              Non solo cosa mangiare: ti aiuto a rendere tutto più semplice, pratico e sostenibile.
             </p>
           </div>
         </div>

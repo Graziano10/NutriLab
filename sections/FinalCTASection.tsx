@@ -19,10 +19,10 @@ export function FinalCTASection() {
             </div>
             <p className="mt-6 text-sm font-semibold uppercase tracking-[0.24em] text-brand-200">Prenota la consulenza</p>
             <h2 className="mt-4 max-w-3xl text-3xl font-bold tracking-tight sm:text-5xl">
-              Inizia un percorso nutrizionale personalizzato costruito sui tuoi obiettivi e sulla tua quotidianità.
+              Dai inizio al cambiamento con un percorso pensato per te.
             </h2>
             <p className="mt-6 max-w-2xl text-base leading-8 text-white/75 sm:text-lg">
-              Se desideri un supporto professionale per dimagrimento, educazione alimentare, nutrizione sportiva o ricomposizione corporea, puoi richiedere una prima consulenza e valutare insieme il percorso più adatto.
+              Richiedi la prima consulenza e scopri il percorso più adatto ai tuoi obiettivi.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Button href="mailto:info@nutrilab.it?subject=Richiesta%20consulenza%20nutrizionale">Prenota una consulenza</Button>
