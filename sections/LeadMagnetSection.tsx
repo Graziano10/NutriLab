@@ -22,7 +22,7 @@ export function LeadMagnetSection() {
             <ul className="mt-6 space-y-4">
               {quizBenefits.map((benefit) => (
                 <li key={benefit} className="flex items-start gap-3 text-sm leading-6 text-white/78">
-                  <span className="mt-1 text-brand-300">✦</span>
+                  <span className="text-brand-300">✦</span>
                   <span>{benefit}</span>
                 </li>
               ))}

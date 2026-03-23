@@ -21,10 +21,10 @@ export function HeroSection() {
             Nutrizione personalizzata, semplice da seguire
           </div>
           <h1 className="mt-6 max-w-4xl text-5xl font-bold tracking-tight text-white sm:text-6xl xl:text-7xl">
-            Mangia meglio, sentiti meglio, senza diete impossibili.
+            Mangia meglio, sentiti meglio, il tuo benessere al primo posto.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/72 sm:text-xl">
-            Costruiamo insieme un piano alimentare su misura, pratico e sostenibile, per risultati che durano davvero.
+            Costruiamo insieme un piano alimentare su misura, pratico e sostenibile, per il raggiungimento dei tuoi obiettivi. 
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <Button href="#book">Prenota la consulenza</Button>
