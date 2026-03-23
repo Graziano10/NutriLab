@@ -14,19 +14,19 @@ type Goal = 'fat-loss' | 'maintain' | 'muscle-gain';
 
 const goalContent: Record<Goal, { label: string; accent: string; summary: string }> = {
   'fat-loss': {
-    label: 'Definizione',
+    label: 'Dimagrimento',
     accent: 'from-[#FF9A62] to-[#FF6B57]',
-    summary: 'Leggero deficit calorico per accelerare risultati senza perdere aderenza.',
+    summary: 'Una stima orientativa in lieve deficit calorico, utile come primo riferimento prima della visita.',
   },
   maintain: {
     label: 'Mantenimento',
     accent: 'from-[#7DD3FC] to-[#38BDF8]',
-    summary: 'Equilibrio per stabilizzare energia, performance e routine sostenibile.',
+    summary: 'Un intervallo calorico indicativo per mantenere stabilità, energia e continuità nelle abitudini.',
   },
   'muscle-gain': {
-    label: 'Performance',
+    label: 'Massa muscolare',
     accent: 'from-brand-300 to-brand-500',
-    summary: 'Surplus controllato per supportare recupero, forza e massa magra.',
+    summary: 'Una stima iniziale con surplus moderato per supportare allenamento, recupero e crescita muscolare.',
   },
 };
 
@@ -47,9 +47,9 @@ export function CalorieCalculator() {
   }, [activity, age, goal, height, weight]);
 
   const macroPreview = useMemo(() => {
-    if (goal === 'fat-loss') return { protein: '35%', carbs: '35%', fats: '30%' };
-    if (goal === 'muscle-gain') return { protein: '30%', carbs: '45%', fats: '25%' };
-    return { protein: '30%', carbs: '40%', fats: '30%' };
+    if (goal === 'fat-loss') return { proteine: '35%', carboidrati: '35%', grassi: '30%' };
+    if (goal === 'muscle-gain') return { proteine: '30%', carboidrati: '45%', grassi: '25%' };
+    return { proteine: '30%', carboidrati: '40%', grassi: '30%' };
   }, [goal]);
 
   const handleNumberChange = (setter: (value: number) => void) => (event: ChangeEvent<HTMLInputElement>) => {
@@ -63,10 +63,10 @@ export function CalorieCalculator() {
   return (
     <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.08] p-6 shadow-[0_30px_80px_rgba(6,15,12,0.22)] backdrop-blur-xl sm:p-8">
       <div className="mb-6">
-        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-200">Quick tool</p>
-        <h3 className="mt-3 text-2xl font-bold text-white sm:text-3xl">Simula il tuo target calorico quotidiano</h3>
+        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-200">Calcolatore nutrizionale</p>
+        <h3 className="mt-3 text-2xl font-bold text-white sm:text-3xl">Simula il tuo fabbisogno calorico giornaliero</h3>
         <p className="mt-3 text-sm leading-6 text-white/70">
-          Uno strumento rapido e interattivo per visualizzare il punto di partenza prima della consulenza personalizzata.
+          Il risultato è puramente indicativo e non sostituisce una valutazione nutrizionale professionale personalizzata.
         </p>
       </div>
 
@@ -161,7 +161,7 @@ export function CalorieCalculator() {
         </div>
 
         <div className="rounded-[1.75rem] border border-white/10 bg-black/10 p-6">
-          <p className="text-sm uppercase tracking-[0.2em] text-brand-200">Macro preview</p>
+          <p className="text-sm uppercase tracking-[0.2em] text-brand-200">Ripartizione indicativa</p>
           <div className="mt-5 space-y-4">
             {Object.entries(macroPreview).map(([macro, value]) => (
               <div key={macro}>

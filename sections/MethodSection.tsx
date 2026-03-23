@@ -7,8 +7,8 @@ export function MethodSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeading
           eyebrow="Metodo"
-          title="Un percorso in quattro step con più ritmo visivo e maggiore leggibilità."
-          description="Ho trasformato questa parte in una timeline premium, con elementi connessi tra loro e carte più reattive per dare una sensazione di processo solido e strutturato."
+          title="Come funziona il percorso nutrizionale: 4 fasi semplici, personalizzate e monitorate."
+          description="Ogni consulenza nutrizionale segue una struttura chiara: analisi iniziale, strategia su misura, monitoraggio dei progressi e aggiornamenti continui del piano alimentare."
           align="center"
           theme="dark"
         />
@@ -23,7 +23,7 @@ export function MethodSection() {
                 {item.step}
               </div>
               <div className="relative z-10">
-                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-200">Step {item.step}</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-200">Fase {item.step}</p>
                 <h3 className="mt-6 text-2xl font-bold text-white">{item.title}</h3>
                 <p className="mt-4 text-sm leading-7 text-white/72">{item.description}</p>
               </div>

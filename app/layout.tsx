@@ -4,36 +4,42 @@ import './globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nutrilab.example'),
-  title: 'NutriLab | Personalized Nutrition Coaching',
+  title: 'NutriLab | Nutrizionista online e piano alimentare personalizzato',
   description:
-    'Professional nutrition coaching for weight loss, muscle gain, and healthier eating habits with personalized plans and ongoing support.',
-
+    'NutriLab è la landing page di un nutrizionista che offre consulenze online e in studio, piani alimentari personalizzati, nutrizione sportiva ed educazione alimentare.',
+  keywords: [
+    'nutrizionista online',
+    'piano alimentare personalizzato',
+    'consulenza nutrizionale',
+    'nutrizione sportiva',
+    'educazione alimentare',
+    'dimagrimento sostenibile',
+  ],
   icons: {
     icon: '/favicon.png',
     shortcut: '/favicon.png',
     apple: '/favicon.png',
   },
-
   openGraph: {
-    title: 'NutriLab | Personalized Nutrition Coaching',
+    title: 'NutriLab | Nutrizionista online e piano alimentare personalizzato',
     description:
-      'Book a consultation to get a nutrition plan tailored to your lifestyle, body composition goals, and performance needs.',
+      'Prenota una consulenza nutrizionale per ricevere un piano alimentare personalizzato, supporto professionale e strategie sostenibili per i tuoi obiettivi.',
     url: 'https://nutrilab.example',
     siteName: 'NutriLab',
     type: 'website',
+    locale: 'it_IT',
   },
-
   twitter: {
     card: 'summary_large_image',
-    title: 'NutriLab | Personalized Nutrition Coaching',
+    title: 'NutriLab | Nutrizionista online e piano alimentare personalizzato',
     description:
-      'Conversion-focused nutrition coaching website built for people seeking fat loss, muscle gain, and sustainable eating habits.',
+      'Percorsi nutrizionali personalizzati per dimagrimento, benessere, ricomposizione corporea e nutrizione sportiva.',
   },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="it">
       <body>{children}</body>
     </html>
   );

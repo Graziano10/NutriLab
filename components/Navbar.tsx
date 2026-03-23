@@ -3,7 +3,7 @@ import { Button } from '@/components/Button';
 const navItems = [
   { label: 'Metodo', href: '#method' },
   { label: 'Servizi', href: '#services' },
-  { label: 'Risultati', href: '#testimonials' },
+  { label: 'Testimonianze', href: '#testimonials' },
   { label: 'Calcolatore', href: '#quiz' },
 ];
 
@@ -17,7 +17,7 @@ export function Navbar() {
           </span>
           <span>
             <span className="block text-lg font-bold tracking-[0.2em]">NUTRILAB</span>
-            <span className="block text-xs uppercase tracking-[0.28em] text-white/55">Premium coaching</span>
+            <span className="block text-xs uppercase tracking-[0.28em] text-white/55">Nutrizione personalizzata</span>
           </span>
         </a>
 
