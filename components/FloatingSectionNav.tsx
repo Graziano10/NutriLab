@@ -18,9 +18,9 @@ const quickNav = [
 
 export function FloatingSectionNav() {
   return (
-    <aside className="pointer-events-none fixed right-4 top-1/2 z-40 hidden -translate-y-1/2 lg:block xl:right-8">
+    <aside className="pointer-events-none fixed bottom-4 left-1/2 z-40 w-[calc(100%-1.5rem)] max-w-max -translate-x-1/2 md:bottom-6 lg:bottom-auto lg:left-4 lg:top-1/2 lg:w-auto lg:-translate-x-0 lg:-translate-y-1/2 xl:left-8">
       <nav className="pointer-events-auto rounded-3xl border border-white/15 bg-ink/80 p-2 shadow-[0_20px_60px_rgba(3,10,8,0.45)] backdrop-blur-xl">
-        <ul className="flex flex-col gap-1.5">
+        <ul className="flex items-center gap-1.5 lg:flex-col">
           {quickNav.map((item) => {
             const Icon = item.icon;
             return (
@@ -29,7 +29,7 @@ export function FloatingSectionNav() {
                   href={item.href}
                   aria-label={item.label}
                   title={item.label}
-                  className="group inline-flex h-11 w-11 items-center justify-center rounded-2xl text-white/70 transition duration-300 hover:bg-white/10 hover:text-brand-200"
+                  className="group inline-flex h-10 w-10 items-center justify-center rounded-2xl text-white/70 transition duration-300 hover:bg-white/10 hover:text-brand-200 sm:h-11 sm:w-11"
                 >
                   <Icon className="h-5 w-5" />
                 </a>
