@@ -43,7 +43,7 @@ export function Navbar() {
           >
             WhatsApp
           </a>
-          <Button href="#book" className="px-5 py-2.5 text-sm">
+          <Button href="#book" className="px-4 py-2 text-xs sm:px-5 sm:py-2.5 sm:text-sm">
             Prenota ora
           </Button>
         </div>
