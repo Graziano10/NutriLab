@@ -1,4 +1,5 @@
 import { StickyWhatsApp } from '@/components/StickyWhatsApp';
+import { FloatingSectionNav } from '@/components/FloatingSectionNav';
 import { Navbar } from '@/components/Navbar';
 import { FinalCTASection } from '@/sections/FinalCTASection';
 import { HeroSection } from '@/sections/HeroSection';
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <main className="relative overflow-hidden">
       <Navbar />
+      <FloatingSectionNav />
       <HeroSection />
       <ProblemSolutionSection />
       <ServicesSection />

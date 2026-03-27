@@ -1,6 +1,7 @@
 import { Button } from '@/components/Button';
 import { CalorieCalculator } from '@/components/CalorieCalculator';
 import { SectionHeading } from '@/components/SectionHeading';
+import { CheckCircleIcon } from '@/components/SiteIcons';
 import { quizBenefits } from '@/lib/site-data';
 
 export function LeadMagnetSection() {
@@ -22,7 +23,7 @@ export function LeadMagnetSection() {
             <ul className="mt-6 space-y-4">
               {quizBenefits.map((benefit) => (
                 <li key={benefit} className="flex items-start gap-3 text-sm leading-6 text-white/78">
-                  <span className="text-brand-300">✦</span>
+                  <CheckCircleIcon className="mt-0.5 h-5 w-5 shrink-0 text-brand-300" />
                   <span>{benefit}</span>
                 </li>
               ))}
