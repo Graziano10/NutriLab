@@ -1,4 +1,5 @@
 import { Button } from '@/components/Button';
+import { LeafIcon } from '@/components/SiteIcons';
 
 const navItems = [
   { label: 'Metodo', href: '#method' },
@@ -12,8 +13,8 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/70 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <a href="#top" className="flex items-center gap-3 text-white">
-          <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-300 via-brand-500 to-brand-700 text-lg font-black shadow-[0_16px_35px_rgba(47,171,114,0.32)]">
-            N
+          <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-300 via-brand-500 to-brand-700 text-brand-950 shadow-[0_16px_35px_rgba(47,171,114,0.32)]">
+            <LeafIcon className="h-6 w-6" />
           </span>
           <span>
             <span className="block text-lg font-bold tracking-[0.2em]">NUTRILAB</span>
