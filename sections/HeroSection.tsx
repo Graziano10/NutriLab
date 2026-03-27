@@ -1,10 +1,20 @@
 import { Button } from '@/components/Button';
+import { CheckCircleIcon, DeviceIcon, UsersIcon } from '@/components/SiteIcons';
 import { stats } from '@/lib/site-data';
 
 const highlights = [
-  'Percorso su misura per dimagrimento, energia e benessere',
-  'Supporto costante con obiettivi chiari e realistici',
-  'Consulenze online o in studio, semplici da seguire',
+  {
+    text: 'Percorso su misura per dimagrimento, energia e benessere',
+    icon: CheckCircleIcon,
+  },
+  {
+    text: 'Supporto costante con obiettivi chiari e realistici',
+    icon: UsersIcon,
+  },
+  {
+    text: 'Consulenze online o in studio, semplici da seguire',
+    icon: DeviceIcon,
+  },
 ];
 
 export function HeroSection() {
@@ -71,12 +81,15 @@ export function HeroSection() {
               </div>
 
               <div className="mt-8 space-y-4">
-                {highlights.map((point, index) => (
-                  <div key={point} className="flex items-start gap-4 rounded-[1.5rem] border border-white/10 bg-white/5 p-4 transition duration-300 hover:bg-white/10">
-                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white/10 text-sm font-semibold text-brand-200">
-                      0{index + 1}
+                {highlights.map((point) => (
+                  <div
+                    key={point.text}
+                    className="group flex items-start gap-4 rounded-2xl border border-white/12 bg-gradient-to-r from-white/[0.08] to-white/[0.03] p-4 shadow-[0_16px_35px_rgba(3,10,8,0.32)] transition duration-300 hover:border-brand-200/30 hover:from-white/[0.12] hover:to-white/[0.05]"
+                  >
+                    <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-brand-200/30 bg-brand-300/10 text-brand-100 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)]">
+                      <point.icon className="h-5 w-5" />
                     </span>
-                    <p className="pt-1 text-sm leading-6 text-white/80">{point}</p>
+                    <p className="pt-0.5 text-sm font-medium leading-6 text-white/85">{point.text}</p>
                   </div>
                 ))}
               </div>
